@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼국지 영걸전 - 웹 플레이</title>
+    <script src="https://js-dos.com/v7/build/releases/latest/js-dos.js"></script>
+    <style>
+        /* 웹 브라우저 화면 전체를 게임 화면으로 채우는 스타일 */
+        html, body, #dos { 
+            width: 100%; 
+            height: 100%; 
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
+            background-color: #000; 
+        }
+    </style>
+</head>
+<body>
+    <div id="dos"></div>
+    <script>
+        // 에뮬레이터 설정 및 영걸전 압축 파일 실행
+        Dos(document.getElementById("dos"), {
+            style: "none" // 기본 테마 사용 (필요시 "filled"로 변경)
+        }).run("young.zip"); 
+    </script>
+</body>
+</html>
